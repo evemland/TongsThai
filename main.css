@@ -29,12 +29,6 @@ img {
    max-width: 100%;
 }
 
-header h1 a {
-   text-decoration: none;
-   color: black;
-   padding-left: 2rem;
-}
-
 
 /* HEADER */
 /* ----------------------------- */
@@ -47,10 +41,19 @@ header {
 }
 
 header h1 {
-   padding-left: 1rem;
+   padding-left: 2rem;
    font-size: 250%;
-   /* remove underline */
    /* font-family: */
+}
+
+header h1 a {
+   text-decoration: none;
+   color: black;
+}
+
+header h1 a:hover {
+   background-color: #E56161;
+   border-radius: 2rem;
 }
 
 
@@ -96,6 +99,41 @@ article.bio {
    padding: 1rem;
    background-color: #C8E4F9;
    border-radius: 2rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 2fr 1fr;
+}
+
+section.desc {
+   grid-column: 1/3;
+}
+
+h3.dine {
+   grid-column: 1/2;
+   grid-row: 2/3;
+}
+
+h3.view {
+   grid-column: 2/3;
+   grid-row: 2/3;
+}
+
+article.bio h3 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #E56161;
+   padding: 2rem;
+   margin: 0 8rem;
+   border-radius: 3rem;
+   font-size: 130%;
+   box-shadow: 8px 10px 5px 0 grey;
+}
+
+article.bio a {
+   text-decoration: none;
+   color: black;
+   border-radius: 3rem;
 }
 
 article.bio h2 {
@@ -124,6 +162,7 @@ aside.hours {
    background-color: #C8E4F9;
    border-radius: 2rem;
    padding: 1rem;
+   text-align: center;
 }
 
 aside.hours h2 {
@@ -135,63 +174,171 @@ aside.hours h2 {
 }
 
 aside.hours li {
-   margin-left: 1.5rem;
+   /* margin-left: 1.5rem; */
    margin-bottom: 1rem;
    font-size: 125%;
    list-style-type: none;
 }
 
+
+
 /* ABOUT US */
+/* ----------------------------- */
 div.contact {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr;
    background-color: #C8E4F9;
    border-radius: 2rem;
    padding: 1rem;
-   grid-gap: 1rem;
+   margin-left: 1rem;
+   line-height: 1.4;
+   text-align: center;
 }
+
+div.contact h3 {
+   font-size: 160%;
+}
+
+div.contact p {
+   font-size: 140%;
+}
+
+main.home h2{
+   font-size: 200%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 2rem;
+}
+
+section.inside {
+   display: flex;
+   justify-content: space-around;
+   margin: 2rem 2rem;
+}
+
+section.inside img{
+   border-radius: 1rem;
+}
+
 
 /* SPECIAL EVENTS */
+/* ----------------------------- */
 div.special {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr;
    background-color: #C8E4F9;
    border-radius: 2rem;
    padding: 1rem;
-   grid-gap: 1rem;
+   margin-left: 1rem;
+   line-height: 1.4;
+   text-align: center;
 }
 
-section.parties {
-   grid-template-columns: 1/2;
-   grid-template-rows: 1/2;
+div.special h3 {
+   font-size: 170%;
+}
+
+div.special ul {
+   padding: 2rem;
+   font-size: 150%;
+   list-style-type: none;
 }
 
 section.catering {
-   grid-template-columns: 2/3;
-   grid-template-rows: 1/2;
+   display: grid;
+   justify-content: space-around;
+}
+
+section.catering img {
+   border-radius: 2rem;
+   padding: 1rem;
 }
 
 /* MENU */
-
-section.menu h2 {
-   margin-bottom: rem;
+/* ----------------------------- */
+main.menuu h2 {
+   font-size: 200%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 2rem;
 }
+
 section.menu {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
    background-color: #C8E4F9;
    border-radius: 2rem;
+   margin: 2rem;
    padding: 1rem;
-   grid-gap: 1rem;
+   grid-gap: 2rem;
 }
 
-figure.thai {
+/* figure.thai {
    grid-template-columns: 1/2;
    grid-template-rows: 1/2;
+} */
+
+section.menu img {
+   border-radius: 2rem;
+   border: 5px solid #E56161;
 }
+
+section.menu figcaption {
+   margin-top: .5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 150%;
+}
+
+/* MENU PAGES */
+/* ----------------------------- */
+
+section.menu2 {
+   /* display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+   background-color: #C8E4F9;
+   border-radius: 2rem;
+   margin: 2rem;
+   padding: 1rem;
+   grid-gap: 2rem;
+}
+
+section.menu2 img {
+   border-radius: 2rem;
+   border: 5px solid #E56161;
+}
+
+section.menu2 figcaption {
+   margin-top: .5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 150%;
+}
+
+figcaption.grey {
+   color: grey;
+}
+
+section.menu2 figure {
+   display: grid;
+   grid-template-columns: 1.5fr 1fr;
+   grid-template-rows: 1fr;
+   margin: 1rem;
+}
+
+section.menu2 figure p {
+   /* background-color: antiquewhite; */
+   border-radius: 2rem;
+   text-align: center;
+   font-size: 130%;
+   line-height: 1.3;
+   display: flex;
+   align-items: center;
+   padding: 1rem;
+}
+
 
 
 
