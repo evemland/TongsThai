@@ -349,5 +349,69 @@ footer {
    padding: .5rem 1rem 1rem 1rem;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERY */
 /* ----------------------------- */
+
+@media screen and (max-width: 650px){
+
+   .wrapper {
+      width: 100%;
+      grid-template-columns: 1fr;
+      margin: 0;
+   }
+   
+   article.bio {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+   }
+
+   section.desc {
+      grid-column: 1/2;
+      grid-row: 1/2;
+   }
+   
+   h3.dine {
+      grid-column: 1/2;
+      grid-row: 2/3;
+   }
+   
+   h3.view {
+      grid-column: 1/2;
+      grid-row: 3/4;
+   }
+   
+   article.bio h3 {
+      margin: 0;
+      
+   }
+   
+   article.bio a {
+
+   }
+   
+   article.bio h2 {
+
+   }
+   
+   article.bio p {
+
+   }
+
+   main.homepage {
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 1fr 1fr;
+      grid-column: 1/2;
+      grid-row: 1/2;
+   }
+
+   aside.hours {
+      grid-column: 1/2;
+      grid-row: 2/3;
+   }
+
+   img.homeimage {
+      grid-column: 1/2;
+      grid-row: 3/4;
+   }
+
+}
