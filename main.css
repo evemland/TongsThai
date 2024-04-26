@@ -1,11 +1,7 @@
-/* add google sites font */
-/* make bio buttons */
-
 
 
 /* GENERAL */
 /* ----------------------------- */
-/* font will go here */
 
 * {
    box-sizing: border-box;
@@ -19,14 +15,15 @@ body {
 div.wrapper {
    max-width: 960px;
    margin: auto;
-   /* border: 3px solid black; */
-   /* box-shadow: 10px 10px; */
    background-color: #F5E9E2;
 }
 
-
 img {
    max-width: 100%;
+}
+
+div.sitename {
+   font-family: "Platypi", serif;
 }
 
 
@@ -43,7 +40,7 @@ header {
 header h1 {
    padding-left: 2rem;
    font-size: 250%;
-   /* font-family: */
+   font-family: "Platypi", serif;
 }
 
 header h1 a {
@@ -108,6 +105,10 @@ section.desc {
    grid-column: 1/3;
 }
 
+section.desc a {
+   
+}
+
 h3.dine {
    grid-column: 1/2;
    grid-row: 2/3;
@@ -139,8 +140,9 @@ article.bio a {
 article.bio h2 {
    font-size: 200%;
    border-bottom: solid #E56161;
-   /* font family */
+   font-family: "Platypi", serif;
    margin-bottom: .5rem;
+   padding-bottom: .5rem;
 }
 
 article.bio p {
@@ -169,15 +171,16 @@ aside.hours h2 {
    font-size: 150%;
    text-align: center;
    margin-bottom: 1.5rem;
+   padding-bottom: .5rem;
    border-bottom: solid #E56161;
-   /* font family */
+   font-family: "Platypi", serif;
 }
 
 aside.hours li {
-   /* margin-left: 1.5rem; */
    margin-bottom: 1rem;
    font-size: 125%;
    list-style-type: none;
+   line-height: 1.3;
 }
 
 
@@ -207,16 +210,22 @@ main.home h2{
    justify-content: center;
    align-items: center;
    padding: 2rem;
+   font-family: "Platypi", serif;
 }
 
 section.inside {
    display: flex;
    justify-content: space-around;
-   margin: 2rem 2rem;
+   margin: 1rem;
 }
 
 section.inside img{
    border-radius: 1rem;
+   border: 5px solid #E56161;
+}
+
+main.home {
+   margin-right: 1rem;
 }
 
 
@@ -248,7 +257,8 @@ section.catering {
 
 section.catering img {
    border-radius: 2rem;
-   padding: 1rem;
+   margin: 1rem;
+   border: 5px solid #E56161;
 }
 
 /* MENU */
@@ -259,6 +269,7 @@ main.menuu h2 {
    justify-content: center;
    align-items: center;
    padding-top: 2rem;
+   font-family: "Platypi", serif;
 }
 
 section.menu {
@@ -271,11 +282,6 @@ section.menu {
    padding: 1rem;
    grid-gap: 2rem;
 }
-
-/* figure.thai {
-   grid-template-columns: 1/2;
-   grid-template-rows: 1/2;
-} */
 
 section.menu img {
    border-radius: 2rem;
@@ -294,9 +300,6 @@ section.menu figcaption {
 /* ----------------------------- */
 
 section.menu2 {
-   /* display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
    background-color: #C8E4F9;
    border-radius: 2rem;
    margin: 2rem;
@@ -317,10 +320,6 @@ section.menu2 figcaption {
    font-size: 150%;
 }
 
-/* figcaption.grey {
-   color: grey;
-} */
-
 section.menu2 figure {
    display: grid;
    grid-template-columns: 1.5fr 1fr;
@@ -329,7 +328,6 @@ section.menu2 figure {
 }
 
 section.menu2 figure p {
-   /* background-color: antiquewhite; */
    border-radius: 2rem;
    text-align: center;
    font-size: 130%;
@@ -339,7 +337,6 @@ section.menu2 figure p {
    align-items: center;
    padding: 1rem;
 }
-
 
 
 
@@ -355,19 +352,53 @@ footer {
 @media screen and (max-width: 650px){
 
    .wrapper {
-      width: 100%;
+      max-width: 100%;
       grid-template-columns: 1fr;
-      margin: 0;
+      margin: 0 auto;
+   }
+
+   header {
+      display: grid;
+      grid-template-columns: 1fr;
+   }
+
+   div.sitename {
+      margin: 0 auto;
+   }
+
+   nav.topnav {
+      display: flex;
+      margin: 1rem;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+   }
+
+   nav.topnav ul {
+      display: block;
+   }
+
+   nav.topnav li {
+      font-size: 120%;
+   }
+
+   main.homepage {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr .5fr;
+      grid-column: 1/2;
+      grid-row: 1/2;
    }
    
    article.bio {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr .4fr .4fr;
    }
 
    section.desc {
       grid-column: 1/2;
       grid-row: 1/2;
+      padding: .2rem;
+      margin-bottom: 1rem;
    }
    
    h3.dine {
@@ -381,27 +412,18 @@ footer {
    }
    
    article.bio h3 {
-      margin: 0;
-      
    }
    
    article.bio a {
-
    }
    
    article.bio h2 {
-
+      text-align: center;
+      line-height: 1.3;
    }
    
    article.bio p {
-
-   }
-
-   main.homepage {
-      grid-template-columns: 1fr;
-      grid-template-rows: 2fr 1fr 1fr;
-      grid-column: 1/2;
-      grid-row: 1/2;
+      line-height: 1.5;
    }
 
    aside.hours {
@@ -409,9 +431,27 @@ footer {
       grid-row: 2/3;
    }
 
+   aside.hours h2 {
+      font-size: 200%;
+   }
+
+   aside.hours li {
+      font-size: 180%;
+      line-height: 2;
+   }
+
    img.homeimage {
       grid-column: 1/2;
       grid-row: 3/4;
+      display: none;
+   }
+
+   section.menu {
+      grid-template-columns: 1fr;
+   }
+
+   section.menu2 {
+      
    }
 
 }
